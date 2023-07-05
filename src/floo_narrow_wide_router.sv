@@ -13,6 +13,7 @@ module floo_narrow_wide_router
     parameter int unsigned ChannelFifoDepth = 0,
     parameter int unsigned OutputFifoDepth  = 0,
     parameter route_algo_e RouteAlgo        = XYRouting,
+    parameter bit          XYRouteOpt       = 1'b1,
     /// Used for ID-based and XY routing
     parameter int unsigned IdWidth          = 0,
     parameter type         id_t             = logic[IdWidth-1:0],
@@ -76,6 +77,7 @@ module floo_narrow_wide_router
     .ChannelFifoDepth ( ChannelFifoDepth      ),
     .OutputFifoDepth  ( OutputFifoDepth       ),
     .RouteAlgo        ( RouteAlgo             ),
+    .XYRouteOpt       ( XYRouteOpt            ),
     .IdWidth          ( IdWidth               ),
     .id_t             ( id_t                  ),
     .NumAddrRules     ( NumAddrRules          )
@@ -102,6 +104,7 @@ module floo_narrow_wide_router
     .ChannelFifoDepth ( ChannelFifoDepth      ),
     .OutputFifoDepth  ( OutputFifoDepth       ),
     .RouteAlgo        ( RouteAlgo             ),
+    .XYRouteOpt       ( XYRouteOpt            ),
     .IdWidth          ( IdWidth               ),
     .id_t             ( id_t                  ),
     .NumAddrRules     ( NumAddrRules          )
@@ -128,6 +131,7 @@ module floo_narrow_wide_router
     .ChannelFifoDepth ( ChannelFifoDepth  ),
     .OutputFifoDepth  ( OutputFifoDepth   ),
     .RouteAlgo        ( RouteAlgo         ),
+    .XYRouteOpt       ( XYRouteOpt        ),
     .IdWidth          ( IdWidth           ),
     .id_t             ( id_t              ),
     .NumAddrRules     ( NumAddrRules      )
